@@ -22,12 +22,12 @@ class SinusoidWaveGenerator(DataGenerator):
         self._phase_in_radians = phase_in_radians
 
 
-class SinWaveGenerator(SinusoidWaveGenerator):
+class SineWaveGenerator(SinusoidWaveGenerator):
     def generate(self, time_in_seconds):
         return self._amplitude * sin(two_pi * self._frequency_in_hz * time_in_seconds) + self._phase_in_radians
 
 
-class CosWaveGenerator(SinusoidWaveGenerator):
+class CosineWaveGenerator(SinusoidWaveGenerator):
     def generate(self, time_in_seconds):
         return self._amplitude * cos(two_pi * self._frequency_in_hz * time_in_seconds) + self._phase_in_radians
 

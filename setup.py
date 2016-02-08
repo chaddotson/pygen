@@ -11,4 +11,6 @@ setup(name='pygen',
       packages=['pygen'],
       install_requires=install_reqs,
       include_package_data=True,
+      test_suite='nose.collector',
+      tests_require=['nose==1.3.7', 'mock==1.3.0']
 )
