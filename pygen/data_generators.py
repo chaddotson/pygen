@@ -36,6 +36,8 @@ def noisify_data_generator(data_generator, noise_mean, noise_std_dev):
 
     saved_generate = data_generator.generate
 
+    seed()
+
     def noisify(time_in_seconds):
         return saved_generate(time_in_seconds) * normalvariate(noise_mean, noise_std_dev)
 
